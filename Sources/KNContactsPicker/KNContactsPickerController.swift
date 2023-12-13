@@ -68,7 +68,9 @@ class KNContactsPickerController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        selectedContacts = Set(settings.selectedContacts)
+        DispatchQueue.main.async {
+            self.selectedContacts = Set(self.settings.selectedContacts)
+        }
     }
     
     func configureButtons(count: Int) {

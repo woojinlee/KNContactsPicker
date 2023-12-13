@@ -63,14 +63,7 @@ class KNContactsPickerController: UITableViewController {
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationItem.hidesSearchBarWhenScrolling = false
         
-        self.configureButtons(count: self.selectedContacts.count)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        DispatchQueue.main.async {
-            self.selectedContacts = Set(self.settings.selectedContacts)
-        }
+        self.selectedContacts = Set(self.settings.selectedContacts)
     }
     
     func configureButtons(count: Int) {

@@ -46,6 +46,8 @@ public struct KNPickerSettings {
     public var pickerContactsSource: KNContactsSource = .default
     public var pickerContactsList: [CNContact] = []
     
+    public var selectedContacts: [CNContact] = []
+    
     // The 
     public var displayContactsSortedBy: KNContactSortingOption = .familyName
     

@@ -62,8 +62,8 @@ class KNContactsPickerController: UITableViewController {
         self.navigationItem.searchController = searchResultsController
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        
-        self.configureButtons(count: self.selectedContacts.count)
+
+        self.selectedContacts = Set(self.settings.selectedContacts)
     }
     
     func configureButtons(count: Int) {
